@@ -28,9 +28,6 @@ function Home() {
     const firstIndex = lastIndex - dogsPerPage;
     const currentDogs = allDogs.slice(firstIndex, lastIndex);
   
-    const [orden, setOrden] = useState("");
-  
-    
     
 
     const paginado = (pageNumber) => {
@@ -46,20 +43,20 @@ function Home() {
     const handleFilterByAlphabeticName = (e) => {
       e.preventDefault();
       dispatch(OrderByName(e.target.value))
-      setOrden(`Ordenado ${e.target.value}`);
+;
     }
 
     const handleFilterByWeight = (e) => {
       e.preventDefault();
       dispatch(OrderByWeight(e.target.value))
-      setOrden(`Ordenado ${e.target.value}`);
+;
       
     }
 
     const handleOrderByAscenDescen = (e) => {
       e.preventDefault();
       dispatch(OrderAscenDescen(e.target.value))
-      setOrden(`Ordenado ${e.target.value}`)
+
     }
     
 
